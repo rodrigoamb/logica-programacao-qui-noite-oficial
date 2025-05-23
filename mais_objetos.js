@@ -61,3 +61,47 @@ console.log(carro);
 lapiseira.apagar();
 
 // Faça um objeto calculadora da marca Casio, que faz as 4 operações (métodos - somar, subtrair, multiplicar e dividir). Depois disso, use a calculadora e suas 4 operações.
+
+const calculadora = {
+  marca: "Casio",
+
+  somar(num1, num2) {
+    return {
+      ret1: "Alguma coisa",
+      ret2: num1 + num2,
+      ret3: num1 / num2,
+    };
+  },
+
+  subtrair(num1, num2) {
+    return num1 - num2;
+  },
+
+  multiplicar(num1, num2) {
+    return num1 * num2;
+  },
+
+  dividir(num1, num2) {
+    return num1 / num2;
+  },
+};
+
+const resultSoma = calculadora.somar(20, 10);
+
+console.log("O resuldado da soma é: ", resultSoma);
+
+const resultSubtrair = calculadora.subtrair(50, 25);
+
+console.log("O resultado da subtração é: ", resultSubtrair);
+
+const resultMultiplicar = calculadora.multiplicar(2, 30);
+
+console.log("O resultado da multiplicação é: ", resultMultiplicar);
+
+const resultDividir = calculadora.dividir(10, 2);
+
+console.log("O resultado da divisão é: ", resultDividir);
+
+const puxandoMeuDado = calculadora.somar(300, 200);
+
+puxandoMeuDado.ret1;
