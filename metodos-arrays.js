@@ -96,6 +96,62 @@ const carros = [
     preco: 50000,
     estoque: 2,
   },
+  {
+    modelo: "Hilux",
+    preco: 250000,
+    estoque: 0,
+  },
+  {
+    modelo: "Onix",
+    preco: 100000,
+    estoque: 0,
+  },
+  {
+    modelo: "Punto",
+    preco: 30000,
+    estoque: 0,
+  },
+  {
+    modelo: "Celta",
+    preco: 20000,
+    estoque: 0,
+  },
 ];
 
-// o caixa da minha loja está em R$50.000,00. Eu vendi 1 civic, vendi um kwid e tive que baixar o preço do corolla para R$90.000,00 para conseguir vender algum. Monte um algorítimo que mostre as movimentações dos meus carros e mostre quando eu tenho em caixa.
+// o caixa da minha loja está em R$50.000,00. Eu vendi 1 civic, vendi um kwid e tive que baixar o preço do corolla para R$90.000,00 para conseguir vender algum. Monte um algorítimo que mostre as movimentações dos meus carros e mostre quanto eu tenho em caixa.
+
+let caixa = 50000;
+
+const novoPatio = carros.map((carro) => {
+  if (carro.modelo === "Civic" || carro.modelo === "Kwid") {
+    carro.estoque = carro.estoque - 1;
+    caixa = caixa + carro.preco;
+  }
+
+  if (carro.modelo === "Corolla") {
+    carro.preco = 90000;
+  }
+
+  return carro;
+});
+
+console.log(novoPatio);
+console.log(caixa);
+
+// retorna um novo array apenas com os elementos que atendem a uma condição - filter()
+
+const listNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const novosNumeros = listNumeros.filter((item) => {
+  return item > 4;
+});
+
+console.log(novosNumeros);
+
+//----- filtrando carros com estoque zero
+
+const estoqueZero = carros.filter((item) => {
+  return item.estoque === 0 && item.modelo === "Celta";
+});
+
+console.log(estoqueZero);
