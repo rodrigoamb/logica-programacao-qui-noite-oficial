@@ -108,7 +108,7 @@ const carros = [
   },
   {
     modelo: "Punto",
-    preco: 30000,
+    preco: 50000,
     estoque: 0,
   },
   {
@@ -155,3 +155,11 @@ const estoqueZero = carros.filter((item) => {
 });
 
 console.log(estoqueZero);
+
+// find() Retorna o primeiro elemento que satifaz a uma condição
+
+const encontrado = carros.find((item) => {
+  return item.preco === 50000;
+});
+
+console.log(encontrado);
