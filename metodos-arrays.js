@@ -163,3 +163,72 @@ const encontrado = carros.find((item) => {
 });
 
 console.log(encontrado);
+
+//some() - Verifica se pelo menos algum elemento do array atende uma condição
+
+const myNumbers = [-1, 10, 20, 30, 40, 50, 60];
+
+const temMaiorQue50 = myNumbers.some((num) => {
+  return num === 100;
+});
+
+console.log("tem?", temMaiorQue50);
+
+//every() - Verifica se TODOS os itens atendem a uma determinada condição
+
+const temPositivo = myNumbers.every((num) => {
+  return num > 0;
+});
+
+console.log("todos são positivos?", temPositivo);
+
+//includes() - verifica se um elemento existe no array
+
+const allNames = ["Rodrigo", "Lucas", "Wagner", "Ana"];
+
+console.log("Existe Rodrigo no array?", allNames.includes("Rodrigo"));
+
+//forEach() - Itera sobre o elemento do array, como tivesse usando o for tradicional
+
+const comidas = ["vatapá", "arroz", "macarrão"];
+
+comidas.forEach((item) => {
+  console.log(item);
+});
+
+//operador ternário em JS
+
+let idade = 15;
+let podeDirigir = idade >= 18 ? "Pode dirigir" : "Não pode dirigir";
+
+// if (idade >= 18) {
+//   podeDirigir = "Pode dirigir";
+// } else {
+//   podeDirigir = "Não pode dirigir";
+// }
+
+console.log(podeDirigir);
+
+//spread operator
+
+let usuario = {
+  nome: "Ana",
+  idade: 22,
+};
+
+let novoUsuario = {
+  ...usuario,
+  cidade: "Fortaleza",
+};
+
+console.log(usuario);
+console.log(novoUsuario);
+
+//spread com array
+
+const listaFrutas1 = ["banana", "uva", "morango"];
+const listaFrutas2 = ["limao", "tamarindo", "goiaba"];
+
+const minhasFrutas = [...listaFrutas1, "mamao", ...listaFrutas2];
+
+console.log(minhasFrutas);
