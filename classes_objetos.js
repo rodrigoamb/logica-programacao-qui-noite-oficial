@@ -38,3 +38,12 @@ const pessoa2 = new Pessoa(
 );
 
 console.log(pessoa2);
+
+// const nomePessoa = "Rodrigo Medeiros";
+// const idade = 35;
+
+// const apresentacao = `Oi eu me chamo ${nomePessoa} e tenho ${idade} anos`;
+
+// meuContainer.textContent = apresentacao;
+// meuContainer.style.color = "red";
+// meuContainer.style.backgroundColor = "black";
