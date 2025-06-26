@@ -6,12 +6,40 @@
     <title>Javascript</title>
   </head>
   <body>
-    <label for="nome">Digite o seu nome:</label>
-    <input type="text" name="nome" id="nome" />
+    <div>
+      <h1 id="titulo">Minha calculadora</h1>
 
-    <button id="btn" onclick="mostrarMensagem()">Clique aqui</button>
+      <br />
 
-    <div id="container"></div>
+      <div>
+        <label for="num1">Digite o primeiro número:</label>
+        <input type="text" name="numero1" id="num1" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="num2">Digite o segundo número:</label>
+        <input type="text" name="numero2" id="num2" />
+      </div>
+
+      <br />
+
+      <label for="operacoes">Selecione a operação matemática</label>
+      <select name="operacoes" id="operacoes">
+        <option value="+">Somar</option>
+        <option value="-">Subtrair</option>
+        <option value="*">Multiplicar</option>
+        <option value="/">Dividir</option>
+      </select>
+
+      <button id="btnCalcular" onclick="calcular()">Calcular</button>
+
+      <br />
+      <br />
+
+      <div id="resultado">Aguardando os dados</div>
+    </div>
 
     <script src="intro_dom.js"></script>
   </body>

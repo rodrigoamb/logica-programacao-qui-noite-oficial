@@ -1,16 +1,35 @@
-const meuContainer = document.querySelector("#container"); //destino da mensagem
-const inputNome = document.querySelector("#nome"); //selecao do input
+const inputNum1 = document.querySelector("#num1");
+const inputNum2 = document.querySelector("#num2");
+const operacao = document.querySelector("#operacoes");
+const botao = document.querySelector("#btnCalcular");
+const espacoResultado = document.querySelector("#resultado");
 
-const meuBotao = document.querySelector("#btn");
+console.log(operacao);
 
-console.log(meuContainer);
-console.log(inputNome);
-console.log(meuBotao);
+//revisem conceito escopo de bloco e escopo global
 
-function mostrarMensagem() {
-  const nomeDigitado = inputNome.value;
+function calcular() {
+  //primeiro eu tenho que pegar o valor do input1 e input2 e salvar em uma variavel
+  const valor1 = Number(inputNum1.value);
+  const valor2 = Number(inputNum2.value);
 
-  const mensagem = `Olá meu nome é ${nomeDigitado}`;
+  let resultado;
 
-  meuContainer.textContent = mensagem;
+  if (operacao.value === "+") {
+    resultado = valor1 + valor2;
+  }
+
+  if (operacao.value === "-") {
+    resultado = valor1 - valor2;
+  }
+
+  if (operacao.value === "*") {
+    resultado = valor1 * valor2;
+  }
+
+  if (operacao.value === "/") {
+    resultado = valor1 / valor2;
+  }
+
+  espacoResultado.textContent = `O Resultado da Operação é: ${resultado}`;
 }
