@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="titulo">Minha calculadora</h1>
+
+      <br />
+
+      <div>
+        <label for="num1">Digite o primeiro número:</label>
+        <input type="text" name="numero1" id="num1" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="num2">Digite o segundo número:</label>
+        <input type="text" name="numero2" id="num2" />
+      </div>
+
+      <br />
+
+      <label for="operacoes">Selecione a operação matemática</label>
+
+      <button id="btnSomar" onclick="calcular('somar')">Somar (+)</button>
+      <button id="btnSubtrair" onclick="calcular('subtrair')">
+        Subtrair (-)
+      </button>
+      <button id="btnMultiplicar" onclick="calcular('multiplicar')">
+        Multiplicar (*)
+      </button>
+      <button id="btnDividir" onclick="calcular('dividir')">Dividir (/)</button>
+
+      <br />
+      <br />
+
+      <div id="resultado">Aguardando os dados</div>
+    </div>
+
+    <script src="calculadora.js"></script>
+  </body>
+</html>
